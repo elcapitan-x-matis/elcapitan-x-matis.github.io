@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cytrus Kili — ICT Support & Web Developer</title>
+  <meta name="description" content="Portfolio of Cytrus Kili, ICT Support Officer at PNG Customs Service. Web development, systems support, Office 365, SharePoint, and ASYCUDA World.">
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Starfield Canvas Background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-glow" href="/">CK<span class="text-gold">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-sm theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+              <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-section d-flex align-items-center" id="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 text-center text-lg-start">
+          <div class="hero-photo-wrap">
+            <img src="images/cytrus-kili.jpg" alt="Cytrus Kili" class="hero-photo">
+            <div class="hero-photo-ring"></div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <p class="hero-greeting">Hello, I am</p>
+          <h1 class="hero-name">Cytrus Kili</h1>
+          <div class="hero-typed-wrap">
+            <span id="typedText"></span><span class="typed-cursor">|</span>
+          </div>
+          <p class="hero-desc mt-3">
+            ICT Support Officer at PNG Customs Service · Web Application Developer ·
+            Building practical systems with Office 365, SharePoint, SQL, and PHP.
+          </p>
+          <div class="hero-meta">
+            <span><i class="bi bi-geo-alt-fill"></i> Port Moresby, NCD, Papua New Guinea</span>
+            <span><i class="bi bi-envelope-fill"></i> cykilio3@gmail.com</span>
+          </div>
+          <div class="mt-4 d-flex flex-wrap gap-3">
+            <a href="#projects" class="btn btn-gold">View Projects</a>
+            <a href="#contact" class="btn btn-outline-violet">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <i class="bi bi-chevron-double-down"></i>
+    </div>
+  </header>
+
+  <!-- ABOUT SUMMARY -->
+  <section class="section-block" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">01 — About</span>
+        <h2>Profile</h2>
+      </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-8">
+          <p class="lead-text">
+            Knowledgeable in computing technologies and systems development, with proven experience
+            creating and designing software in a test-driven environment. Currently providing
+            second-level ICT support, Office 365 administration, and web development at PNG Customs Service.
+          </p>
+          <p>
+            I work across the stack: from troubleshooting desktops and printers to deploying SharePoint
+            sites, automating workflows with Power Automate, extracting reports from ASYCUDA World via SQL,
+            and maintaining the PNG Customs website.
+          </p>
+          <a href="about" class="link-arrow">Read full profile <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="col-lg-4">
+          <div class="info-card float-card">
+            <h5><i class="bi bi-briefcase-fill text-gold"></i> Current Role</h5>
+            <p class="mb-0">ICT Support Officer — App & Dev.<br><small>PNG Customs Service & ASYCUDA World</small></p>
+          </div>
+          <div class="info-card float-card mt-3">
+            <h5><i class="bi bi-mortarboard-fill text-gold"></i> Education</h5>
+            <p class="mb-0">Bachelor of Information Systems<br><small>Divine Word University, 2022</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SUMMARY -->
+  <section class="section-block" id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">02 — Skills</span>
+        <h2>Technical Toolkit</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card float-card">
+            <i class="bi bi-headset skill-icon"></i>
+            <h5>Technical Support</h5>
+            <p>End-user & second-level support, desktops, printers, laptops, network troubleshooting.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card float-card">
+            <i class="bi bi-microsoft skill-icon"></i>
+            <h5>Office 365 & SharePoint</h5>
+            <p>Teams, OneDrive, Forms, Power Automate, SharePoint site deployment & user training.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card float-card">
+            <i class="bi bi-database skill-icon"></i>
+            <h5>SQL & Reporting</h5>
+            <p>Data extraction from ASYCUDA World, database design & management.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card float-card">
+            <i class="bi bi-code-slash skill-icon"></i>
+            <h5>Web Development</h5>
+            <p>PHP, MySQL, JavaScript, AJAX. CMS: WordPress, Joomla. cPanel & WHM.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="skills" class="link-arrow">Explore all skills <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SUMMARY -->
+  <section class="section-block" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">03 — Projects</span>
+        <h2>Selected Work</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card float-card">
+            <div class="project-icon"><i class="bi bi-globe2"></i></div>
+            <h5>PNG Customs Website Upgrade</h5>
+            <p>Redesigned the organization's website, managing SQL database, domain, and cPanel administration.</p>
+            <span class="badge-tag">PHP / cPanel</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card float-card">
+            <div class="project-icon"><i class="bi bi-diagram-3"></i></div>
+            <h5>Office 365 Deployment Suite</h5>
+            <p>Led SharePoint & Power Automate deployments for Legal, Investigations, Payroll, and ICT asset registries.</p>
+            <span class="badge-tag">SharePoint / Power Automate</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card float-card">
+            <div class="project-icon"><i class="bi bi-journal-code"></i></div>
+            <h5>Staff Loan Management System</h5>
+            <p>Freelance SQL-backed web application for loan tracking and reporting.</p>
+            <span class="badge-tag">PHP / MySQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="projects" class="link-arrow">View all projects <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA SUMMARY -->
+  <section class="section-block" id="media">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">04 — Media</span>
+        <h2>Media & Gallery</h2>
+      </div>
+      <p class="text-secondary">Photos and visuals from ICT operations, site deployments, and travel to outer ports and provinces.</p>
+      <a href="media" class="link-arrow">Browse media gallery <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- EDUCATION SUMMARY -->
+  <section class="section-block" id="education">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">05 — Education</span>
+        <h2>Academic Background</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="timeline-item float-card">
+            <h5>Bachelor of Information Systems</h5>
+            <p class="text-gold mb-1">Divine Word University · 2018 – 2021 (Awarded March 2022)</p>
+            <p class="mb-0">Recipient of the Telikom PNG Award for Best Final Year Project.</p>
+          </div>
+          <div class="timeline-item float-card mt-3">
+            <h5>Secondary Education</h5>
+            <p class="text-gold mb-1">Kokopo Secondary School · 2014 – 2017</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="info-card float-card">
+            <h5><i class="bi bi-patch-check-fill text-gold"></i> Certifications</h5>
+            <ul class="list-unstyled mb-0 small">
+              <li class="mb-2">CCNAv7: Switching, Routing & Wireless Essentials (2020)</li>
+              <li class="mb-2">NDG Linux Essentials — Cisco Networking Academy</li>
+              <li>Microsoft Certifications — Viva Learning (ongoing)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-3">
+        <a href="education" class="link-arrow">Full education details <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SUMMARY -->
+  <section class="section-block" id="experience">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">06 — Experience</span>
+        <h2>Work History</h2>
+      </div>
+      <div class="timeline-item float-card">
+        <div class="d-flex justify-content-between flex-wrap">
+          <h5>ICT Support Officer — App & Dev.</h5>
+          <span class="text-gold small">Oct 2022 – Present</span>
+        </div>
+        <p class="text-secondary mb-0">PNG Customs Service & ASYCUDA World</p>
+      </div>
+      <div class="timeline-item float-card mt-3">
+        <div class="d-flex justify-content-between flex-wrap">
+          <h5>Tech Sales Representative</h5>
+          <span class="text-gold small">Aug 2022 – Oct 2022</span>
+        </div>
+        <p class="text-secondary mb-0">Theodist</p>
+      </div>
+      <div class="timeline-item float-card mt-3">
+        <div class="d-flex justify-content-between flex-wrap">
+          <h5>Freelance Web Application Developer</h5>
+          <span class="text-gold small">Jan 2022 – Feb 2022</span>
+        </div>
+        <p class="text-secondary mb-0">PNG University of Natural Resources & Environment (Bursary)</p>
+      </div>
+      <div class="mt-3">
+        <a href="experience" class="link-arrow">Full work experience <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS SUMMARY -->
+  <section class="section-block" id="achievements">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">07 — Achievements</span>
+        <h2>Recognition</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="achievement-card float-card">
+            <i class="bi bi-trophy-fill text-gold achievement-icon"></i>
+            <h5>Telikom PNG Award</h5>
+            <p>Best Final Year Project — System Architecture Proposal Design for a Student Management System for National Polytechnical Institute of Technology.</p>
+            <small class="text-gold">Divine Word University · March 2022</small>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="achievement-card float-card">
+            <i class="bi bi-award-fill text-gold achievement-icon"></i>
+            <h5>Website Upgrade — PNG Customs Service</h5>
+            <p>Redesigned and maintained the organization's public website, including SQL database and cPanel administration.</p>
+            <small class="text-gold">Oct 2022 – Present</small>
+          </div>
+        </div>
+      </div>
+      <div class="mt-3">
+        <a href="achievements" class="link-arrow">View all achievements <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SUMMARY -->
+  <section class="section-block" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">08 — Contact</span>
+        <h2>Let's Connect</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="contact-card float-card">
+            <p><i class="bi bi-telephone-fill text-gold"></i> +675 7589 5650</p>
+            <p><i class="bi bi-envelope-fill text-gold"></i> cykilio3@gmail.com</p>
+            <p class="mb-0"><i class="bi bi-geo-alt-fill text-gold"></i> P.O Box 330, Vision City 1131, NCD, Papua New Guinea</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <p class="mb-0">For detailed contact information and professional references, please visit the contact page.</p>
+        </div>
+      </div>
+      <div class="mt-3">
+        <a href="contact" class="link-arrow">Full contact details <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; <span id="year"></span> Cytrus Kili. Built with Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="https://github.com/cytruskili" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="mailto:cykilio3@gmail.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a href="tel:+67575895650" class="social-link" aria-label="Phone"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery (optional, available for future extensions) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/starfield.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
