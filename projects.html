@@ -62,27 +62,117 @@
         </div>
       </div>
 
-      <!-- Projects Grid -->
-      <div class="row g-4">
+      <!-- ==========================================
+           ENTERPRISE & COMMERCIAL SYSTEMS
+           ========================================== -->
+      <div class="section-header-wrap mb-4 mt-2">
+        <h3 class="section-subtitle"><i class="bi bi-hdd-network text-gold me-2"></i> Enterprise & Commercial Systems</h3>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="row g-4 mb-5">
         
-        <!-- Project 1: PNG Customs O365 Suite -->
+        <!-- Project 1: Tesseract Client Portal -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-node float-card h-100">
+            <div class="node-header">
+              <div class="node-icon-wrap">
+                <i class="bi bi-person-video3 node-icon"></i>
+              </div>
+              <span class="node-status text-success"><i class="bi bi-circle-fill"></i> Launched</span>
+            </div>
+            <h4 class="node-title">Tesseract Cloud Client Portal</h4>
+            <p class="node-desc">
+              A two-sided web application for managing the complete client lifecycle. Built on Laravel 13, it features a client-facing self-service portal (RFQs, invoicing, uptime reports) and an admin back-office for payment verification and hosting lifecycle management.
+            </p>
+            <div class="mt-2 mb-3">
+              <a href="https://client.tesseract-pg.com" target="_blank" rel="noopener" class="link-arrow" style="font-size: 0.8rem;">Visit Live Portal <i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+            <ul class="node-features">
+              <li>RFQ to Invoice lifecycle & Dunning automation</li>
+              <li>Role-based access (Admin & Client)</li>
+              <li>Uptime reporting & Hosting suspension logic</li>
+            </ul>
+            <div class="node-tags mt-auto">
+              <span class="tech-tag">Laravel 13</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap 5</span>
+              <span class="tech-tag">jQuery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: PNGCS Intelligence Management System -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-node float-card h-100">
+            <div class="node-header">
+              <div class="node-icon-wrap">
+                <i class="bi bi-shield-lock node-icon"></i>
+              </div>
+              <span class="node-status text-gold"><i class="bi bi-circle-fill"></i> In Development</span>
+            </div>
+            <h4 class="node-title">PNGCS Intelligence Management System (IMS)</h4>
+            <p class="node-desc">
+              A highly secure enterprise platform for the PNG Customs Intelligence & Targeting Division. Features a complex state-machine workflow engine (7 workflows), 24 authorization policies, a Federated Search Service connecting external systems (ASYCUDA, BMS, IPA), and immutable DB-level audit triggers.
+            </p>
+            <ul class="node-features">
+              <li>Federated Search adapter architecture</li>
+              <li>Admiralty Rating & Case Management</li>
+              <li>Defence-in-depth authorization (Policies)</li>
+            </ul>
+            <div class="node-tags mt-auto">
+              <span class="tech-tag">Laravel 11</span>
+              <span class="tech-tag">PostgreSQL 18</span>
+              <span class="tech-tag">Alpine.js</span>
+              <span class="tech-tag">Tailwind</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: ASYCUDA World Web Portal -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-node float-card h-100">
+            <div class="node-header">
+              <div class="node-icon-wrap">
+                <i class="bi bi-server node-icon"></i>
+              </div>
+              <span class="node-status text-gold"><i class="bi bi-circle-fill"></i> In Development</span>
+            </div>
+            <h4 class="node-title">ASYCUDA World Web Portal</h4>
+            <p class="node-desc">
+              A centralized portal for the PNG Customs Service providing public access to legislation, role-based authenticated access to internal documents, and single-click download of the ASYCUDA World application via an Nginx reverse proxy.
+            </p>
+            <ul class="node-features">
+              <li>Reverse Proxy integration for JNLP downloads</li>
+              <li>Role-based portal files (PG_BROKERS, PG_INTEL)</li>
+              <li>Ubuntu / Nginx / PostgreSQL production stack</li>
+            </ul>
+            <div class="node-tags mt-auto">
+              <span class="tech-tag">Laravel 11</span>
+              <span class="tech-tag">PostgreSQL 16</span>
+              <span class="tech-tag">Nginx</span>
+              <span class="tech-tag">Ubuntu 22.04</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: O365 Deployment -->
         <div class="col-md-6 col-lg-4">
           <div class="project-node float-card h-100">
             <div class="node-header">
               <div class="node-icon-wrap">
                 <i class="bi bi-diagram-3-fill node-icon"></i>
               </div>
-              <span class="node-status text-gold"><i class="bi bi-circle-fill"></i> Active</span>
+              <span class="node-status text-success"><i class="bi bi-circle-fill"></i> Active</span>
             </div>
             <h4 class="node-title">Office 365 & SharePoint Enterprise Suite</h4>
             <p class="node-desc">
               Led the application deployment and user training for multiple divisions (Legal, Investigations, Payroll, Internal Audits) at PNG Customs Service. Built file management libraries and automated workflows.
             </p>
             <ul class="node-features">
-              <li>Legal & Investigations Case Management Systems</li>
+              <li>Legal & Investigations Case Management</li>
               <li>Payroll & Recruitment Record Management</li>
               <li>CEF & DCA List Management Registries</li>
-              <li>ICT Asset Registry & Network Tracker</li>
             </ul>
             <div class="node-tags mt-auto">
               <span class="tech-tag">SharePoint</span>
@@ -92,7 +182,7 @@
           </div>
         </div>
 
-        <!-- Project 2: ASYCUDA World Database Reporting -->
+        <!-- Project 5: ASYCUDA SQL -->
         <div class="col-md-6 col-lg-4">
           <div class="project-node float-card h-100">
             <div class="node-header">
@@ -118,7 +208,7 @@
           </div>
         </div>
 
-        <!-- Project 3: PNG Customs Website Upgrade -->
+        <!-- Project 6: Customs Website Upgrade -->
         <div class="col-md-6 col-lg-4">
           <div class="project-node float-card h-100">
             <div class="node-header">
@@ -144,80 +234,163 @@
           </div>
         </div>
 
-        <!-- Project 4: Tesseract Cloud Technologies -->
-        <div class="col-md-6 col-lg-4">
-          <div class="project-node float-card h-100">
-            <div class="node-header">
-              <div class="node-icon-wrap">
-                <i class="bi bi-cloud-arrow-up-fill node-icon"></i>
-              </div>
-              <span class="node-status text-violet"><i class="bi bi-circle-fill"></i> Founding Partner</span>
-            </div>
-            <h4 class="node-title">Tesseract Cloud Technologies Platform</h4>
-            <p class="node-desc">
-              Architected and launched the web hosting infrastructure for a technology agency providing affordable digital infrastructure to PNG SMEs. Managed WHM/cPanel reseller environments and automated client provisioning.
-            </p>
-            <ul class="node-features">
-              <li>Web hosting services & reseller setup</li>
-              <li>Imunify360 & Cloudflare security integration</li>
-              <li>Client CMS deployment (WordPress)</li>
-            </ul>
-            <div class="node-tags mt-auto">
-              <span class="tech-tag">WHM/cPanel</span>
-              <span class="tech-tag">WordPress</span>
-              <span class="tech-tag">Hosting Admin</span>
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <!-- Project 5: Staff Loan Management System -->
+      <!-- ==========================================
+           LOCAL FREELANCE & ACADEMIC SYSTEMS
+           ========================================== -->
+      <div class="section-header-wrap mb-4 mt-5">
+        <h3 class="section-subtitle"><i class="bi bi-laptop text-violet me-2"></i> Local Freelance & Academic Systems</h3>
+        <div class="section-line"></div>
+      </div>
+      
+      <p class="text-secondary small mb-4">
+        Custom-built web applications using PHP (OOP), MySQL, Bootstrap 5, AJAX, jQuery, and JavaScript. Engineered with MVC framework design and custom system architecture.
+      </p>
+
+      <div class="row g-3 mb-5">
+        
+        <!-- Local Project 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="project-node float-card h-100">
-            <div class="node-header">
-              <div class="node-icon-wrap">
-                <i class="bi bi-wallet2 node-icon"></i>
-              </div>
-              <span class="node-status text-secondary"><i class="bi bi-check-circle-fill"></i> Completed</span>
+          <div class="local-project-tile float-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="lp-title">PNG UNRE Staff Loan Management System</h5>
+              <span class="badge bg-secondary">v1.0</span>
             </div>
-            <h4 class="node-title">Staff Loan Management System</h4>
-            <p class="node-desc">
-              A freelance SQL-backed web application designed to track, manage, and report on staff loan disbursements and repayments. Built for a local bursary office to replace manual spreadsheet tracking.
-            </p>
-            <ul class="node-features">
+            <p class="lp-desc">Management system for internal staff loan accounts at the Administration Bursary section.</p>
+            <ul class="lp-features">
               <li>Automated loan calculation & tracking</li>
               <li>Role-based access control</li>
               <li>Exportable financial reporting</li>
             </ul>
-            <div class="node-tags mt-auto">
-              <span class="tech-tag">PHP</span>
+            <div class="node-tags mt-auto pt-2">
+              <span class="tech-tag">PHP OOP</span>
               <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">AJAX</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 6: Telikom PNG Award Project -->
+        <!-- Local Project 2 -->
         <div class="col-md-6 col-lg-4">
-          <div class="project-node float-card h-100">
-            <div class="node-header">
-              <div class="node-icon-wrap">
-                <i class="bi bi-mortarboard-fill node-icon"></i>
-              </div>
-              <span class="node-status text-secondary"><i class="bi bi-trophy-fill"></i> Awarded</span>
+          <div class="local-project-tile float-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="lp-title">College Learning Management System</h5>
+              <span class="badge bg-secondary">v1.1.9</span>
             </div>
-            <h4 class="node-title">Student Management System Architecture</h4>
-            <p class="node-desc">
-              Awarded the Telikom PNG Award for Best Final Year Project. Designed a comprehensive system architecture proposal for the National Polytechnical Institute of Technology to digitize student records.
-            </p>
-            <ul class="node-features">
-              <li>System Architecture Proposal Design</li>
-              <li>Database normalisation & ERD mapping</li>
-              <li>Enterprise Systems implementation plan</li>
+            <p class="lp-desc">A student academic & learning management system.</p>
+            <ul class="lp-features">
+              <li>Feature 1 (To be added)</li>
+              <li>Feature 2 (To be added)</li>
+              <li>Feature 3 (To be added)</li>
             </ul>
-            <div class="node-tags mt-auto">
-              <span class="tech-tag">Systems Analysis</span>
-              <span class="tech-tag">Database Design</span>
+            <div class="node-tags mt-auto pt-2">
+              <span class="tech-tag">PHP OOP</span>
+              <span class="tech-tag">MVC</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Local Project 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="local-project-tile float-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="lp-title">DWU Alumni Web Portal</h5>
+              <span class="badge bg-secondary">v1.1</span>
+            </div>
+            <p class="lp-desc">A standard publishing blog and social site for DWU Alumni.</p>
+            <ul class="lp-features">
+              <li>Feature 1 (To be added)</li>
+              <li>Feature 2 (To be added)</li>
+              <li>Feature 3 (To be added)</li>
+            </ul>
+            <div class="node-tags mt-auto pt-2">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">jQuery</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Local Project 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="local-project-tile float-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="lp-title">Local SME Shopping Catalogue</h5>
+              <span class="badge bg-secondary">v2.1.5</span>
+            </div>
+            <p class="lp-desc">A standard e-shopping catalogue website and admin-end management system.</p>
+            <ul class="lp-features">
+              <li>Feature 1 (To be added)</li>
+              <li>Feature 2 (To be added)</li>
+              <li>Feature 3 (To be added)</li>
+            </ul>
+            <div class="node-tags mt-auto pt-2">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">AJAX</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Local Project 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="local-project-tile float-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="lp-title">Patient Administration Mgmt System</h5>
+              <span class="badge bg-secondary">v1.2.5</span>
+            </div>
+            <p class="lp-desc">A standard virtualized patient management system for small to medium clinics.</p>
+            <ul class="lp-features">
+              <li>Feature 1 (To be added)</li>
+              <li>Feature 2 (To be added)</li>
+              <li>Feature 3 (To be added)</li>
+            </ul>
+            <div class="node-tags mt-auto pt-2">
+              <span class="tech-tag">PHP OOP</span>
               <span class="tech-tag">Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Local Project 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="local-project-tile float-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="lp-title">National Polytech Student Academics Suite</h5>
+              <span class="badge bg-secondary">v1.0</span>
+            </div>
+            <p class="lp-desc">A fully-fledged student academic & learning management system (Telikom Award Winner).</p>
+            <ul class="lp-features">
+              <li>Feature 1 (To be added)</li>
+              <li>Feature 2 (To be added)</li>
+              <li>Feature 3 (To be added)</li>
+            </ul>
+            <div class="node-tags mt-auto pt-2">
+              <span class="tech-tag">System Design</span>
+              <span class="tech-tag">MVC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Local Project 7 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="local-project-tile float-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="lp-title">Work VISA Management System</h5>
+              <span class="badge bg-secondary">v1.0</span>
+            </div>
+            <p class="lp-desc">Document and data management system for PNG Immigration and Dept of Labor (Kokopo).</p>
+            <ul class="lp-features">
+              <li>Feature 1 (To be added)</li>
+              <li>Feature 2 (To be added)</li>
+              <li>Feature 3 (To be added)</li>
+            </ul>
+            <div class="node-tags mt-auto pt-2">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Data Mgmt</span>
             </div>
           </div>
         </div>
