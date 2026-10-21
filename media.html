@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media — Cytrus Kili</title>
+  <link rel="icon" href="images/logo.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-glow" href="/">CK<span class="text-gold">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#media">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-sm theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+              <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="subpage-main flex-grow-1">
+    <div class="container">
+      
+      <!-- Stylized Page Header -->
+      <header class="page-header text-center">
+        <span class="section-label">Visual Logs</span>
+        <h1 class="page-title">Media Gallery</h1>
+      </header>
+
+      <!-- Intro Text -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <p class="lead-text">
+            A visual archive of system deployments, ICT operations, project milestones, and site visits across Papua New Guinea.
+          </p>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           SECTION 1: PROJECTS & DEPLOYMENTS
+           (Copy this whole section block to create a new category)
+           ============================================================ -->
+      <div class="media-section mb-5">
+        <div class="section-header-wrap mb-4">
+          <h3 class="section-subtitle"><i class="bi bi-cpu text-gold me-2"></i> Projects & Deployments</h3>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- ITEM 1 (Template Item) -->
+          <div class="col-md-6 col-lg-4">
+            <!-- data-bs-toggle and data-bs-target activate the modal -->
+            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal1">
+              <div class="thumbnail-img-wrap">
+                <!-- Replace the src below with your actual image path -->
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="Network Server Room" class="thumbnail-img">
+                <div class="thumbnail-overlay">
+                  <i class="bi bi-zoom-in overlay-icon"></i>
+                </div>
+              </div>
+              <div class="thumbnail-info">
+                <h5 class="thumb-title">ASYCUDA Server Maintenance</h5>
+                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Oct 2023 · Customs HQ</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- ITEM 2 (Template Item) -->
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal2">
+              <div class="thumbnail-img-wrap">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Data Dashboard" class="thumbnail-img">
+                <div class="thumbnail-overlay">
+                  <i class="bi bi-zoom-in overlay-icon"></i>
+                </div>
+              </div>
+              <div class="thumbnail-info">
+                <h5 class="thumb-title">Office 365 Case Management Dashboard</h5>
+                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Jan 2024 · Legal Division</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- ITEM 3 (Template Item) -->
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal3">
+              <div class="thumbnail-img-wrap">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Network Cabling" class="thumbnail-img">
+                <div class="thumbnail-overlay">
+                  <i class="bi bi-zoom-in overlay-icon"></i>
+                </div>
+              </div>
+              <div class="thumbnail-info">
+                <h5 class="thumb-title">Provincial Network Upgrade</h5>
+                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Aug 2023 · Lae Port</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================================
+           SECTION 2: TEAM & EVENTS
+           ============================================================ -->
+      <div class="media-section mb-5">
+        <div class="section-header-wrap mb-4">
+          <h3 class="section-subtitle"><i class="bi bi-people text-gold me-2"></i> Events & Milestones</h3>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- ITEM 4 (Template Item) -->
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal4">
+              <div class="thumbnail-img-wrap">
+                <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=800&auto=format&fit=crop" alt="Award Ceremony" class="thumbnail-img">
+                <div class="thumbnail-overlay">
+                  <i class="bi bi-zoom-in overlay-icon"></i>
+                </div>
+              </div>
+              <div class="thumbnail-info">
+                <h5 class="thumb-title">Telikom PNG Award Ceremony</h5>
+                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Mar 2022 · DWU Madang</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- ITEM 5 (Template Item) -->
+          <div class="col-md-6 col-lg-4">
+            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal5">
+              <div class="thumbnail-img-wrap">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Team Meeting" class="thumbnail-img">
+                <div class="thumbnail-overlay">
+                  <i class="bi bi-zoom-in overlay-icon"></i>
+                </div>
+              </div>
+              <div class="thumbnail-info">
+                <h5 class="thumb-title">Tesseract Founders Strategy</h5>
+                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Nov 2023 · Port Moresby</p>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================================
+           MODALS (Lightboxes)
+           Each thumbnail card targets a specific modal ID. 
+           Copy a modal block when you add a new image.
+           ============================================================ -->
+      
+      <!-- Modal 1 -->
+      <div class="modal fade" id="mediaModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content media-modal-content">
+            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal-body p-0">
+              <!-- Replace src with high-res version of the image -->
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop" alt="ASYCUDA Server Maintenance" class="modal-image">
+              <div class="modal-caption">
+                <h4>ASYCUDA Server Maintenance</h4>
+                <p>Routine maintenance and SQL database extraction at the Customs HQ server room to ensure 99.9% uptime for ASYCUDA World.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2 -->
+      <div class="modal fade" id="mediaModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content media-modal-content">
+            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal-body p-0">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" alt="Data Dashboard" class="modal-image">
+              <div class="modal-caption">
+                <h4>Office 365 Case Management Dashboard</h4>
+                <p>SharePoint and Power Automate interface deployed for the Legal Division to track and manage case files efficiently.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 3 -->
+      <div class="modal fade" id="mediaModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content media-modal-content">
+            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal-body p-0">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop" alt="Network Cabling" class="modal-image">
+              <div class="modal-caption">
+                <h4>Provincial Network Upgrade</h4>
+                <p>Deployment of new switches and structured cabling at the Lae Port facility during a regional ICT support visit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 4 -->
+      <div class="modal fade" id="mediaModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content media-modal-content">
+            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal-body p-0">
+              <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1600&auto=format&fit=crop" alt="Award Ceremony" class="modal-image">
+              <div class="modal-caption">
+                <h4>Telikom PNG Award Ceremony</h4>
+                <p>Receiving the Best Final Year Project award at Divine Word University for the Student Management System architecture.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 5 -->
+      <div class="modal fade" id="mediaModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content media-modal-content">
+            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            <div class="modal-body p-0">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" alt="Team Meeting" class="modal-image">
+              <div class="modal-caption">
+                <h4>Tesseract Founders Strategy</h4>
+                <p>Planning session with Malai Kiap for the launch of Tesseract Cloud Technologies' hosting infrastructure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline Navigation -->
+      <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top border-secondary-subtle">
+        <a href="/" class="link-arrow"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        <a href="/#contact" class="link-arrow">Contact me <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; <span id="year"></span> Cytrus Kili. Built with Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="https://github.com/elcapitan-x-matis" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="mailto:cykili03@gmail.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a href="tel:+67575895650" class="social-link" aria-label="Phone"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

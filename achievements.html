@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements — Cytrus Kili</title>
+  <link rel="icon" href="images/logo.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-glow" href="/">CK<span class="text-gold">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#media">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-sm theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+              <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="subpage-main flex-grow-1">
+    <div class="container">
+      
+      <!-- Stylized Page Header -->
+      <header class="page-header text-center">
+        <span class="section-label">Milestones</span>
+        <h1 class="page-title">Achievements</h1>
+      </header>
+
+      <!-- Intro Text -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <p class="lead-text">
+            A showcase of professional recognition, academic awards, and successful enterprise deployments delivered throughout my career.
+          </p>
+        </div>
+      </div>
+
+      <!-- HOLOGRAPHIC GALLERY -->
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Achievement 1: Telikom PNG Award -->
+        <div class="col-md-6 col-lg-4">
+          <div class="holo-card h-100">
+            <div class="holo-scanline"></div>
+            <div class="holo-icon-wrap">
+              <i class="bi bi-trophy-fill holo-icon"></i>
+            </div>
+            <span class="holo-badge text-gold border-gold">Academic Award</span>
+            <h3 class="holo-title">Telikom PNG Award</h3>
+            <p class="holo-desc">
+              Awarded for Best Final Year Project at Divine Word University. Designed a comprehensive System Architecture Proposal for a Student Management System for the National Polytechnical Institute of Technology.
+            </p>
+            <div class="holo-footer mt-auto">
+              <span class="holo-date"><i class="bi bi-calendar-check"></i> March 2022</span>
+              <span class="holo-org">Divine Word University</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 2: O365 Deployment -->
+        <div class="col-md-6 col-lg-4">
+          <div class="holo-card h-100">
+            <div class="holo-scanline"></div>
+            <div class="holo-icon-wrap">
+              <i class="bi bi-microsoft holo-icon"></i>
+            </div>
+            <span class="holo-badge text-violet border-violet">Enterprise Deployment</span>
+            <h3 class="holo-title">Office 365 & SharePoint Rollout</h3>
+            <p class="holo-desc">
+              Coordinated and led the enterprise application deployment for PNG Customs Service across multiple divisions (Payroll, Legal, Investigations, Internal Audits), including case management systems and asset registries.
+            </p>
+            <div class="holo-footer mt-auto">
+              <span class="holo-date"><i class="bi bi-calendar-check"></i> Jan 2024 – Present</span>
+              <span class="holo-org">PNG Customs Service</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 3: Customs Website Upgrade -->
+        <div class="col-md-6 col-lg-4">
+          <div class="holo-card h-100">
+            <div class="holo-scanline"></div>
+            <div class="holo-icon-wrap">
+              <i class="bi bi-window-dock holo-icon"></i>
+            </div>
+            <span class="holo-badge text-gold border-gold">System Upgrade</span>
+            <h3 class="holo-title">PNG Customs Website Redesign</h3>
+            <p class="holo-desc">
+              Redesigned the organization's public-facing website. Currently maintaining the SQL database, web domain, and cPanel administrative functions to ensure high availability and security.
+            </p>
+            <div class="holo-footer mt-auto">
+              <span class="holo-date"><i class="bi bi-calendar-check"></i> Oct 2022 – Present</span>
+              <span class="holo-org">PNG Customs Service</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 4: Tesseract Cloud Launch -->
+        <div class="col-md-6 col-lg-4">
+          <div class="holo-card h-100">
+            <div class="holo-scanline"></div>
+            <div class="holo-icon-wrap">
+              <i class="bi bi-rocket-takeoff-fill holo-icon"></i>
+            </div>
+            <span class="holo-badge text-violet border-violet">Business Venture</span>
+            <h3 class="holo-title">Tesseract Cloud Launch</h3>
+            <p class="holo-desc">
+              Founded and launched a technology agency providing digital infrastructure to PNG SMEs. Successfully set up and deployed the web hosting services platform, managing WHM/cPanel environments and client provisioning.
+            </p>
+            <div class="holo-footer mt-auto">
+              <span class="holo-date"><i class="bi bi-calendar-check"></i> Current</span>
+              <span class="holo-org">Tesseract Cloud Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievement 5: CCNA & Linux Certs -->
+        <div class="col-md-6 col-lg-4">
+          <div class="holo-card h-100">
+            <div class="holo-scanline"></div>
+            <div class="holo-icon-wrap">
+              <i class="bi bi-patch-check-fill holo-icon"></i>
+            </div>
+            <span class="holo-badge text-gold border-gold">Certifications</span>
+            <h3 class="holo-title">Technical Credentials</h3>
+            <p class="holo-desc">
+              Earned CCNAv7: Switching, Routing, and Wireless Essentials, and NDG Linux Essentials from Cisco Networking Academy, demonstrating validated proficiency in networking and server operating systems.
+            </p>
+            <div class="holo-footer mt-auto">
+              <span class="holo-date"><i class="bi bi-calendar-check"></i> 2020</span>
+              <span class="holo-org">Cisco Networking Academy</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Inline Navigation -->
+      <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top border-secondary-subtle">
+        <a href="/" class="link-arrow"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        <a href="/#contact" class="link-arrow">Contact me <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; <span id="year"></span> Cytrus Kili. Built with Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="https://github.com/elcapitan-x-matis" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="mailto:cykili03@gmail.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a href="tel:+67575895650" class="social-link" aria-label="Phone"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Cytrus Kili</title>
+  <link rel="icon" href="images/logo.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-glow" href="/">CK<span class="text-gold">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#media">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-sm theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+              <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="subpage-main flex-grow-1">
+    <div class="container">
+      
+      <!-- Stylized Page Header -->
+      <header class="page-header text-center">
+        <span class="section-label">Get in Touch</span>
+        <h1 class="page-title">Communication Nodes</h1>
+      </header>
+
+      <!-- Intro Text -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <p class="lead-text">
+            Select a communication channel below to establish a connection. Available for professional engagements, agency inquiries, and networking.
+          </p>
+        </div>
+      </div>
+
+      <!-- CONTACT TERMINALS GRID -->
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Professional / PNG Customs -->
+        <div class="col-lg-5 col-md-6">
+          <div class="contact-terminal float-card h-100">
+            <div class="terminal-top-bar">
+              <span class="status-dot bg-success"></span>
+              <span class="terminal-label">PRIMARY_NODE // WORK</span>
+            </div>
+            <div class="terminal-content">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="node-icon-box">
+                  <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <div>
+                  <h4 class="mb-0">PNG Customs Service</h4>
+                  <small class="text-secondary">ICT Support Officer - App & Dev</small>
+                </div>
+              </div>
+              
+              <ul class="contact-data-list">
+                <li>
+                  <i class="bi bi-envelope-fill text-gold"></i>
+                  <div>
+                    <span class="data-label">Work Email</span>
+                    <a href="mailto:kilic@customs.gov.pg" class="data-value">kilic@customs.gov.pg</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-telephone-fill text-gold"></i>
+                  <div>
+                    <span class="data-label">Landline / Ext</span>
+                    <a href="tel:+6753127711" class="data-value">+675 312 7711</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-geo-alt-fill text-gold"></i>
+                  <div>
+                    <span class="data-label">Location</span>
+                    <span class="data-value">Customs HQ, Port Moresby, NCD</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agency / Tesseract Cloud -->
+        <div class="col-lg-5 col-md-6">
+          <div class="contact-terminal float-card h-100">
+            <div class="terminal-top-bar">
+              <span class="status-dot bg-primary"></span>
+              <span class="terminal-label">SECONDARY_NODE // AGENCY</span>
+            </div>
+            <div class="terminal-content">
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="node-icon-box violet-border">
+                  <i class="bi bi-cloud-arrow-up-fill text-violet"></i>
+                </div>
+                <div>
+                  <h4 class="mb-0">Tesseract Cloud</h4>
+                  <small class="text-secondary">Founding Partner</small>
+                </div>
+              </div>
+              
+              <ul class="contact-data-list">
+                <li>
+                  <i class="bi bi-envelope-fill text-violet"></i>
+                  <div>
+                    <span class="data-label">Agency Email</span>
+                    <a href="mailto:cytrus.kili@tesseract-pg.com" class="data-value">cytrus.kili@tesseract-pg.com</a>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-globe2 text-violet"></i>
+                  <div>
+                    <span class="data-label">Services</span>
+                    <span class="data-value">Web Hosting, Dev & ICT Support</span>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-geo-alt-fill text-violet"></i>
+                  <div>
+                    <span class="data-label">Location</span>
+                    <span class="data-value">Vision City, Port Moresby, NCD</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PERSONAL COMMS & SOCIALS -->
+      <div class="row mt-5">
+        <div class="col-lg-10 mx-auto">
+          <div class="personal-comms-panel">
+            <div class="row align-items-center">
+              
+              <div class="col-md-7 mb-4 mb-md-0">
+                <h4 class="mb-3">Personal Communications</h4>
+                <div class="d-flex flex-column flex-sm-row gap-4">
+                  <a href="mailto:cykili03@gmail.com" class="personal-link">
+                    <i class="bi bi-envelope-at-fill"></i>
+                    <span>cykili03@gmail.com</span>
+                  </a>
+                  <a href="tel:+67575895650" class="personal-link">
+                    <i class="bi bi-phone-fill"></i>
+                    <span>+675 7589 5650</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-md-5 text-md-end">
+                <h6 class="text-secondary mb-3 text-uppercase" style="letter-spacing: 2px; font-size: 0.8rem;">Network Links</h6>
+                <div class="d-flex justify-content-md-end gap-3">
+                  <a href="https://github.com/elcapitan-x-matis" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/cytrus-kili-7285b3431" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <!-- Future Socials placeholders 
+                  <a href="#" class="social-icon-btn" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="#" class="social-icon-btn" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline Navigation -->
+      <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top border-secondary-subtle">
+        <a href="/" class="link-arrow"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        <a href="/" class="link-arrow">Return to Top <i class="bi bi-arrow-up"></i></a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; <span id="year"></span> Cytrus Kili. Built with Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="https://github.com/elcapitan-x-matis" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="mailto:cykili03@gmail.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a href="tel:+67575895650" class="social-link" aria-label="Phone"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

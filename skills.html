@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Cytrus Kili</title>
+  <link rel="icon" href="images/logo.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas id="starfield"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand-glow" href="/">CK<span class="text-gold">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#media">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-sm theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+              <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="subpage-main flex-grow-1">
+    <div class="container">
+      
+      <!-- Stylized Page Header -->
+      <header class="page-header text-center">
+        <span class="section-label">Capabilities</span>
+        <h1 class="page-title">Technical Toolkit</h1>
+      </header>
+
+      <!-- Intro Text -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <p class="lead-text">
+            A comprehensive breakdown of my technical competencies, spanning enterprise ICT support, systems administration, database management, and full-stack web development.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="row g-4">
+        
+        <!-- 1. Technical Support & Service Desk -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-module float-card h-100">
+            <div class="module-header">
+              <i class="bi bi-headset module-icon"></i>
+              <h4>Support & Service Desk</h4>
+            </div>
+            <ul class="module-list">
+              <li>End-user & second-level technical support</li>
+              <li>Desktop, printer & laptop troubleshooting</li>
+              <li>Network connectivity diagnostics</li>
+              <li>ManageEngine Service Desk (Ticketing, Escalation, Prioritization)</li>
+              <li>Hardware repairs & OS/software upgrades</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. Systems & Server Administration -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-module float-card h-100">
+            <div class="module-header">
+              <i class="bi bi-hdd-network module-icon"></i>
+              <h4>Systems Administration</h4>
+            </div>
+            <ul class="module-list">
+              <li>Windows 10/11 & Windows Server environments</li>
+              <li>Active Directory & Azure AD (User accounts, permissions)</li>
+              <li>Office 365 Admin Panel</li>
+              <li>Linux environment navigation & command line (NDG Certified)</li>
+              <li>Server & workstation imaging</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Office 365 & SharePoint -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-module float-card h-100">
+            <div class="module-header">
+              <i class="bi bi-microsoft module-icon"></i>
+              <h4>Office 365 & Automation</h4>
+            </div>
+            <ul class="module-list">
+              <li>SharePoint site deployment & user training</li>
+              <li>Power Automate workflow creation</li>
+              <li>Microsoft Teams, OneDrive & MS Forms</li>
+              <li>Advanced Excel (Formulas, Data Extraction, Reporting)</li>
+              <li>Outlook configuration & email management</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Database Management -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-module float-card h-100">
+            <div class="module-header">
+              <i class="bi bi-database module-icon"></i>
+              <h4>Database & Reporting</h4>
+            </div>
+            <ul class="module-list">
+              <li>SQL data extraction & reporting (ASYCUDA World)</li>
+              <li>Relational database design & normalization</li>
+              <li>MySQL, MariaDB, SQLite</li>
+              <li>Stored procedures, triggers, and views</li>
+              <li>Backup, recovery, and migration planning</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Web & Software Development -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-module float-card h-100">
+            <div class="module-header">
+              <i class="bi bi-code-slash module-icon"></i>
+              <h4>Web & App Development</h4>
+            </div>
+            <ul class="module-list">
+              <li>PHP, MySQL, JavaScript, AJAX</li>
+              <li>HTML5, CSS3, Bootstrap 5, jQuery</li>
+              <li>Content Management Systems (WordPress, Joomla)</li>
+              <li>Python (Tkinter, PyQt)</li>
+              <li>Java (Android SDK)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. Server, Hosting & Networking -->
+        <div class="col-md-6 col-lg-4">
+          <div class="skill-module float-card h-100">
+            <div class="module-header">
+              <i class="bi bi-globe2 module-icon"></i>
+              <h4>Hosting & Networking</h4>
+            </div>
+            <ul class="module-list">
+              <li>cPanel & WHM management</li>
+              <li>Domain registration & DNS configuration</li>
+              <li>Router, switch, and WAP configuration</li>
+              <li>VLANs, inter-VLAN routing, & STP (CCNAv7 Certified)</li>
+              <li>Network security & firewall rules</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Soft Skills & Professional Ethics -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="info-card float-card">
+            <h4 class="mb-4"><i class="bi bi-person-check-fill text-gold me-2"></i> Professional Competencies</h4>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <h6 class="text-violet mb-2"><i class="bi bi-shield-check"></i> Ethics for Computing</h6>
+                <p class="small text-secondary mb-0">Formal study in professional ethics, data privacy, and responsible computing practices (IS110).</p>
+              </div>
+              <div class="col-md-4">
+                <h6 class="text-violet mb-2"><i class="bi bi-people-fill"></i> Leadership & Training</h6>
+                <p class="small text-secondary mb-0">Experienced in conducting user training for SharePoint, MS Teams, and general ICT literacy. Former Class Captain (2019).</p>
+              </div>
+              <div class="col-md-4">
+                <h6 class="text-violet mb-2"><i class="bi bi-airplane-fill"></i> Adaptability</h6>
+                <p class="small text-secondary mb-0">Proven ability to adapt to diverse technical environments, including travel to outer ports and provinces for on-site ICT support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inline Navigation -->
+      <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top border-secondary-subtle">
+        <a href="/" class="link-arrow"><i class="bi bi-arrow-left"></i> Back to Home</a>
+        <a href="/#contact" class="link-arrow">Contact me <i class="bi bi-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer mt-auto">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; <span id="year"></span> Cytrus Kili. Built with Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="https://github.com/elcapitan-x-matis" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="mailto:cykili03@gmail.com" class="social-link" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+          <a href="tel:+67575895650" class="social-link" aria-label="Phone"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/starfield.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
