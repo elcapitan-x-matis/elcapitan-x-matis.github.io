@@ -119,3 +119,29 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* ============================================================
+   FLOATING SCROLL TO TOP BUTTON
+   ============================================================ */
+(function initScrollTopButton() {
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  if (!scrollBtn) return;
+
+  // Show/hide button based on scroll position
+  window.addEventListener('scroll', function () {
+    // Show button after scrolling down 300px
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add('show');
+    } else {
+      scrollBtn.classList.remove('show');
+    }
+  }, { passive: true });
+
+  // Smooth scroll to top on click
+  scrollBtn.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+})();
