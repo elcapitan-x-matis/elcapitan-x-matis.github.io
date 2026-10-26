@@ -145,3 +145,43 @@
     });
   });
 })();
+
+/* ============================================================
+   ANIMATED COUNT-UP — project count cards
+   ============================================================ */
+(function initCounters() {
+  const counters = document.querySelectorAll('.stat-number[data-count]');
+  if (!counters.length) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function animate(el) {
+    const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    if (reduceMotion || target === 0) { el.textContent = target; return; }
+    const duration = 1600;
+    const start = performance.now();
+    function frame(now) {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+      el.textContent = Math.round(target * eased);
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(function (el) { el.textContent = el.getAttribute('data-count'); });
+    return;
+  }
+
+  const io = new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        animate(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  counters.forEach(function (el) { io.observe(el); });
+})();

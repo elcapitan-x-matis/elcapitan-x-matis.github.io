@@ -47,221 +47,317 @@
   <!-- MAIN CONTENT -->
   <main class="subpage-main flex-grow-1">
     <div class="container">
-      
-      <!-- Stylized Page Header -->
+
       <header class="page-header text-center">
         <span class="section-label">Visual Logs</span>
         <h1 class="page-title">Media Gallery</h1>
       </header>
 
-      <!-- Intro Text -->
-      <div class="row justify-content-center mb-5">
+      <div class="row justify-content-center mb-4">
         <div class="col-lg-8 text-center">
-          <p class="lead-text">
-            A visual archive of system deployments, ICT operations, project milestones, and site visits across Papua New Guinea.
-          </p>
+          <p class="lead-text">Screens and visuals from the systems I have deployed, the platforms still in development, and my local freelance and academic projects.</p>
         </div>
       </div>
+
+      <!-- Filters + search -->
+      <div class="gallery-toolbar">
+        <div class="filter-chips" role="tablist" aria-label="Filter projects">
+          <button type="button" class="chip active" data-filter="all">All <span class="chip-count"></span></button>
+          <button type="button" class="chip" data-filter="deployed">Deployed <span class="chip-count"></span></button>
+          <button type="button" class="chip" data-filter="development">In Development <span class="chip-count"></span></button>
+          <button type="button" class="chip" data-filter="local">Local Projects <span class="chip-count"></span></button>
+        </div>
+        <div class="gallery-search">
+          <i class="bi bi-search"></i>
+          <input type="search" id="gallerySearch" placeholder="Search projects or tech..." aria-label="Search gallery">
+        </div>
+      </div>
+      <p class="gallery-status" id="galleryStatus" aria-live="polite"></p>
 
       <!-- ============================================================
-           SECTION 1: PROJECTS & DEPLOYMENTS
-           (Copy this whole section block to create a new category)
+           GALLERY GRID — HOW TO ADD / EDIT AN ITEM
+           1. Copy one whole <div class="col-6 col-lg-4 gallery-col"> block below.
+           2. data-category = deployed | development | local
+              (also change the text inside the <span class="status-pill ..."> to match)
+           3. data-title / data-meta / data-desc = lightbox text
+           4. data-link = live URL (leave "" to hide the "Visit" button)
+           5. Images: replace the thumbnail src and data-full with your own files,
+              e.g. images/gallery/my-project.jpg (thumbnail and full can be the same file)
            ============================================================ -->
-      <div class="media-section mb-5">
-        <div class="section-header-wrap mb-4">
-          <h3 class="section-subtitle"><i class="bi bi-cpu text-gold me-2"></i> Projects & Deployments</h3>
-          <div class="section-line"></div>
+      <div class="row g-3 g-lg-4" id="galleryGrid">
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
+             data-title="Tesseract Client Portal" data-meta="Tesseract Cloud · Laravel 13" data-link="https://client.tesseract-pg.com"
+             data-full="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Two-sided portal for RFQs, invoicing, uptime reports and hosting lifecycle management.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Tesseract Client Portal" class="thumbnail-img" loading="lazy">
+              <span class="status-pill deployed">Deployed</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">Tesseract Client Portal</h5>
+              <p class="thumb-meta">Tesseract Cloud · Laravel 13</p>
+            </div>
+          </a>
         </div>
 
-        <div class="row g-4">
-          
-          <!-- ITEM 1 (Template Item) -->
-          <div class="col-md-6 col-lg-4">
-            <!-- data-bs-toggle and data-bs-target activate the modal -->
-            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal1">
-              <div class="thumbnail-img-wrap">
-                <!-- Replace the src below with your actual image path -->
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="Network Server Room" class="thumbnail-img">
-                <div class="thumbnail-overlay">
-                  <i class="bi bi-zoom-in overlay-icon"></i>
-                </div>
-              </div>
-              <div class="thumbnail-info">
-                <h5 class="thumb-title">ASYCUDA Server Maintenance</h5>
-                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Oct 2023 · Customs HQ</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- ITEM 2 (Template Item) -->
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal2">
-              <div class="thumbnail-img-wrap">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Data Dashboard" class="thumbnail-img">
-                <div class="thumbnail-overlay">
-                  <i class="bi bi-zoom-in overlay-icon"></i>
-                </div>
-              </div>
-              <div class="thumbnail-info">
-                <h5 class="thumb-title">Office 365 Case Management Dashboard</h5>
-                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Jan 2024 · Legal Division</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- ITEM 3 (Template Item) -->
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal3">
-              <div class="thumbnail-img-wrap">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="Network Cabling" class="thumbnail-img">
-                <div class="thumbnail-overlay">
-                  <i class="bi bi-zoom-in overlay-icon"></i>
-                </div>
-              </div>
-              <div class="thumbnail-info">
-                <h5 class="thumb-title">Provincial Network Upgrade</h5>
-                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Aug 2023 · Lae Port</p>
-              </div>
-            </a>
-          </div>
-
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
+             data-title="PNG Customs Website Upgrade" data-meta="PNG Customs Service · PHP / MySQL" data-link=""
+             data-full="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Redesigned public website with SQL database integration and cPanel and domain administration.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="PNG Customs Website Upgrade" class="thumbnail-img" loading="lazy">
+              <span class="status-pill deployed">Deployed</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">PNG Customs Website Upgrade</h5>
+              <p class="thumb-meta">PNG Customs Service · PHP / MySQL</p>
+            </div>
+          </a>
         </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
+             data-title="Office 365 & SharePoint Suite" data-meta="PNG Customs Service · Since Jan 2024" data-link=""
+             data-full="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop"
+             data-desc="SharePoint sites and Power Automate workflows for Legal, Investigations, Payroll and Internal Audits.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" alt="Office 365 & SharePoint Suite" class="thumbnail-img" loading="lazy">
+              <span class="status-pill deployed">Deployed</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">Office 365 & SharePoint Suite</h5>
+              <p class="thumb-meta">PNG Customs Service · Since Jan 2024</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
+             data-title="ASYCUDA World SQL Reporting" data-meta="PNG Customs Service · SQL" data-link=""
+             data-full="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Data extraction and custom reports from ASYCUDA World to support operational decisions.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="ASYCUDA World SQL Reporting" class="thumbnail-img" loading="lazy">
+              <span class="status-pill deployed">Deployed</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">ASYCUDA World SQL Reporting</h5>
+              <p class="thumb-meta">PNG Customs Service · SQL</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="development"
+             data-title="PNGCS Intelligence Management System" data-meta="PNG Customs Service · Laravel 11 / PostgreSQL 18" data-link=""
+             data-full="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Secure platform for the Intelligence & Targeting Division with workflow engine and federated search.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="PNGCS Intelligence Management System" class="thumbnail-img" loading="lazy">
+              <span class="status-pill development">In Development</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">PNGCS Intelligence Management System</h5>
+              <p class="thumb-meta">PNG Customs Service · Laravel 11 / PostgreSQL 18</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="development"
+             data-title="ASYCUDA World Web Portal" data-meta="PNG Customs Service · Laravel 11 / Nginx" data-link=""
+             data-full="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Central portal with role-based documents and single-click ASYCUDA World downloads.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="ASYCUDA World Web Portal" class="thumbnail-img" loading="lazy">
+              <span class="status-pill development">In Development</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">ASYCUDA World Web Portal</h5>
+              <p class="thumb-meta">PNG Customs Service · Laravel 11 / Nginx</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="PNG UNRE Staff Loan Management System" data-meta="v1.0 · PHP OOP / MySQL" data-link=""
+             data-full="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Staff loan accounts for the Administration Bursary section.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" alt="PNG UNRE Staff Loan Management System" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">PNG UNRE Staff Loan Management System</h5>
+              <p class="thumb-meta">v1.0 · PHP OOP / MySQL</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="College Learning Management System" data-meta="v1.1.9 · PHP OOP / MVC" data-link=""
+             data-full="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Student academic and learning management system.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop" alt="College Learning Management System" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">College Learning Management System</h5>
+              <p class="thumb-meta">v1.1.9 · PHP OOP / MVC</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="DWU Alumni Web Portal" data-meta="v1.1 · PHP / jQuery" data-link=""
+             data-full="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Publishing blog and social site for DWU Alumni.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="DWU Alumni Web Portal" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">DWU Alumni Web Portal</h5>
+              <p class="thumb-meta">v1.1 · PHP / jQuery</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="Local SME Shopping Catalogue" data-meta="v2.1.5 · JavaScript / AJAX" data-link=""
+             data-full="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1600&auto=format&fit=crop"
+             data-desc="E-shopping catalogue with an admin management system.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" alt="Local SME Shopping Catalogue" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">Local SME Shopping Catalogue</h5>
+              <p class="thumb-meta">v2.1.5 · JavaScript / AJAX</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="Patient Administration Management System" data-meta="v1.2.5 · PHP OOP" data-link=""
+             data-full="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Patient management system for small to medium clinics.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" alt="Patient Administration Management System" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">Patient Administration Management System</h5>
+              <p class="thumb-meta">v1.2.5 · PHP OOP</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="National Polytech Student Academics Suite" data-meta="v1.0 · System Design / MVC" data-link=""
+             data-full="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Telikom Award winning student academic and learning management system.">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop" alt="National Polytech Student Academics Suite" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">National Polytech Student Academics Suite</h5>
+              <p class="thumb-meta">v1.0 · System Design / MVC</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="Work VISA Management System" data-meta="v1.0 · PHP / MySQL" data-link=""
+             data-full="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1600&auto=format&fit=crop"
+             data-desc="Document and data management for PNG Immigration and Dept of Labor (Kokopo).">
+            <div class="thumbnail-img-wrap">
+              <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=800&auto=format&fit=crop" alt="Work VISA Management System" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">Work VISA Management System</h5>
+              <p class="thumb-meta">v1.0 · PHP / MySQL</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- TEMPLATE (copy this, remove the comment markers, and edit):
+        <div class="col-6 col-lg-4 gallery-col">
+          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
+             data-title="Project Title" data-meta="v1.0 · Tech · Client" data-link=""
+             data-full="images/gallery/project-full.jpg"
+             data-desc="One or two sentences about the project.">
+            <div class="thumbnail-img-wrap">
+              <img src="images/gallery/project-thumb.jpg" alt="Project Title" class="thumbnail-img" loading="lazy">
+              <span class="status-pill local">Local Project</span>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+            </div>
+            <div class="thumbnail-info">
+              <h5 class="thumb-title">Project Title</h5>
+              <p class="thumb-meta">v1.0 · Tech · Client</p>
+            </div>
+          </a>
+        </div>
+        -->
       </div>
 
-      <!-- ============================================================
-           SECTION 2: TEAM & EVENTS
-           ============================================================ -->
-      <div class="media-section mb-5">
-        <div class="section-header-wrap mb-4">
-          <h3 class="section-subtitle"><i class="bi bi-people text-gold me-2"></i> Events & Milestones</h3>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="row g-4">
-          
-          <!-- ITEM 4 (Template Item) -->
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal4">
-              <div class="thumbnail-img-wrap">
-                <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=800&auto=format&fit=crop" alt="Award Ceremony" class="thumbnail-img">
-                <div class="thumbnail-overlay">
-                  <i class="bi bi-zoom-in overlay-icon"></i>
-                </div>
-              </div>
-              <div class="thumbnail-info">
-                <h5 class="thumb-title">Telikom PNG Award Ceremony</h5>
-                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Mar 2022 · DWU Madang</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- ITEM 5 (Template Item) -->
-          <div class="col-md-6 col-lg-4">
-            <a href="#" class="media-thumbnail-card float-card" data-bs-toggle="modal" data-bs-target="#mediaModal5">
-              <div class="thumbnail-img-wrap">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Team Meeting" class="thumbnail-img">
-                <div class="thumbnail-overlay">
-                  <i class="bi bi-zoom-in overlay-icon"></i>
-                </div>
-              </div>
-              <div class="thumbnail-info">
-                <h5 class="thumb-title">Tesseract Founders Strategy</h5>
-                <p class="thumb-meta"><i class="bi bi-calendar3"></i> Nov 2023 · Port Moresby</p>
-              </div>
-            </a>
-          </div>
-
-        </div>
+      <div class="gallery-empty d-none" id="galleryEmpty">
+        <i class="bi bi-images"></i>
+        <p>No projects match your filter. Try another category or clear the search.</p>
       </div>
 
-      <!-- ============================================================
-           MODALS (Lightboxes)
-           Each thumbnail card targets a specific modal ID. 
-           Copy a modal block when you add a new image.
-           ============================================================ -->
-      
-      <!-- Modal 1 -->
-      <div class="modal fade" id="mediaModal1" tabindex="-1" aria-hidden="true">
+      <!-- Single lightbox shared by every item -->
+      <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true" aria-label="Project preview">
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content media-modal-content">
             <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
             <div class="modal-body p-0">
-              <!-- Replace src with high-res version of the image -->
-              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop" alt="ASYCUDA Server Maintenance" class="modal-image">
+              <div class="lb-stage">
+                <img src="" alt="" class="modal-image" id="lbImage">
+                <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
+                <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+              </div>
               <div class="modal-caption">
-                <h4>ASYCUDA Server Maintenance</h4>
-                <p>Routine maintenance and SQL database extraction at the Customs HQ server room to ensure 99.9% uptime for ASYCUDA World.</p>
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                  <span class="status-pill static" id="lbStatus"></span>
+                  <span class="lb-counter" id="lbCounter"></span>
+                </div>
+                <h4 id="lbTitle"></h4>
+                <p class="mb-1 small text-secondary" id="lbMeta"></p>
+                <p id="lbDesc"></p>
+                <a href="#" target="_blank" rel="noopener" class="btn btn-sm btn-gold d-none" id="lbLink">Visit live site <i class="bi bi-box-arrow-up-right ms-1"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Modal 2 -->
-      <div class="modal fade" id="mediaModal2" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content media-modal-content">
-            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-            <div class="modal-body p-0">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" alt="Data Dashboard" class="modal-image">
-              <div class="modal-caption">
-                <h4>Office 365 Case Management Dashboard</h4>
-                <p>SharePoint and Power Automate interface deployed for the Legal Division to track and manage case files efficiently.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal 3 -->
-      <div class="modal fade" id="mediaModal3" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content media-modal-content">
-            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-            <div class="modal-body p-0">
-              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop" alt="Network Cabling" class="modal-image">
-              <div class="modal-caption">
-                <h4>Provincial Network Upgrade</h4>
-                <p>Deployment of new switches and structured cabling at the Lae Port facility during a regional ICT support visit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal 4 -->
-      <div class="modal fade" id="mediaModal4" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content media-modal-content">
-            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-            <div class="modal-body p-0">
-              <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1600&auto=format&fit=crop" alt="Award Ceremony" class="modal-image">
-              <div class="modal-caption">
-                <h4>Telikom PNG Award Ceremony</h4>
-                <p>Receiving the Best Final Year Project award at Divine Word University for the Student Management System architecture.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal 5 -->
-      <div class="modal fade" id="mediaModal5" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content media-modal-content">
-            <button type="button" class="btn-close-custom" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
-            <div class="modal-body p-0">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" alt="Team Meeting" class="modal-image">
-              <div class="modal-caption">
-                <h4>Tesseract Founders Strategy</h4>
-                <p>Planning session with Malai Kiap for the launch of Tesseract Cloud Technologies' hosting infrastructure.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Inline Navigation -->
       <div class="d-flex justify-content-between align-items-center mt-5 pt-4 border-top border-secondary-subtle">
         <a href="/" class="link-arrow"><i class="bi bi-arrow-left"></i> Back to Home</a>
         <a href="/#contact" class="link-arrow">Contact me <i class="bi bi-arrow-right"></i></a>
@@ -301,5 +397,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="js/starfield.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 </html>
