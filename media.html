@@ -76,20 +76,16 @@
 
       <!-- ============================================================
            GALLERY GRID — HOW TO ADD / EDIT AN ITEM
-           1. Copy one whole <div class="col-6 col-lg-4 gallery-col"> block below.
-           2. data-category = deployed | development | local
-              (also change the text inside the <span class="status-pill ..."> to match)
-           3. data-title / data-meta / data-desc = lightbox text
-           4. data-link = live URL (leave "" to hide the "Visit" button)
-           5. Images: replace the thumbnail src and data-full with your own files,
-              e.g. images/gallery/my-project.jpg (thumbnail and full can be the same file)
+           1. data-images: Add a comma-separated list of image paths. 
+              e.g. data-images="images/screenshots/project/1.png, images/screenshots/project/2.png"
            ============================================================ -->
       <div class="row g-3 g-lg-4" id="galleryGrid">
 
+        <!-- 1. Tesseract Client Portal -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
              data-title="Tesseract Client Portal" data-meta="Tesseract Cloud · Laravel 13" data-link="https://client.tesseract-pg.com"
-             data-full="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
              data-desc="Two-sided portal for RFQs, invoicing, uptime reports and hosting lifecycle management.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Tesseract Client Portal" class="thumbnail-img" loading="lazy">
@@ -103,10 +99,11 @@
           </a>
         </div>
 
+        <!-- 2. PNG Customs Website Upgrade -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
              data-title="PNG Customs Website Upgrade" data-meta="PNG Customs Service · PHP / MySQL" data-link=""
-             data-full="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
              data-desc="Redesigned public website with SQL database integration and cPanel and domain administration.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="PNG Customs Website Upgrade" class="thumbnail-img" loading="lazy">
@@ -120,10 +117,11 @@
           </a>
         </div>
 
+        <!-- 3. Office 365 & SharePoint Suite -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
              data-title="Office 365 & SharePoint Suite" data-meta="PNG Customs Service · Since Jan 2024" data-link=""
-             data-full="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1600&auto=format&fit=crop"
              data-desc="SharePoint sites and Power Automate workflows for Legal, Investigations, Payroll and Internal Audits.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" alt="Office 365 & SharePoint Suite" class="thumbnail-img" loading="lazy">
@@ -137,10 +135,11 @@
           </a>
         </div>
 
+        <!-- 4. ASYCUDA World SQL Reporting -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="deployed"
              data-title="ASYCUDA World SQL Reporting" data-meta="PNG Customs Service · SQL" data-link=""
-             data-full="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop"
              data-desc="Data extraction and custom reports from ASYCUDA World to support operational decisions.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="ASYCUDA World SQL Reporting" class="thumbnail-img" loading="lazy">
@@ -154,10 +153,11 @@
           </a>
         </div>
 
+        <!-- 5. PNGCS Intelligence Management System -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="development"
              data-title="PNGCS Intelligence Management System" data-meta="PNG Customs Service · Laravel 11 / PostgreSQL 18" data-link=""
-             data-full="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop"
              data-desc="Secure platform for the Intelligence & Targeting Division with workflow engine and federated search.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop" alt="PNGCS Intelligence Management System" class="thumbnail-img" loading="lazy">
@@ -171,10 +171,11 @@
           </a>
         </div>
 
+        <!-- 6. ASYCUDA World Web Portal -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="development"
              data-title="ASYCUDA World Web Portal" data-meta="PNG Customs Service · Laravel 11 / Nginx" data-link=""
-             data-full="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop"
              data-desc="Central portal with role-based documents and single-click ASYCUDA World downloads.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="ASYCUDA World Web Portal" class="thumbnail-img" loading="lazy">
@@ -188,10 +189,11 @@
           </a>
         </div>
 
+        <!-- 7. PNG UNRE Staff Loan Management System -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
              data-title="PNG UNRE Staff Loan Management System" data-meta="v1.0 · PHP OOP / MySQL" data-link=""
-             data-full="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop"
              data-desc="Staff loan accounts for the Administration Bursary section.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" alt="PNG UNRE Staff Loan Management System" class="thumbnail-img" loading="lazy">
@@ -205,10 +207,11 @@
           </a>
         </div>
 
+        <!-- 8. College Learning Management System -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
              data-title="College Learning Management System" data-meta="v1.1.9 · PHP OOP / MVC" data-link=""
-             data-full="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1600&auto=format&fit=crop"
              data-desc="Student academic and learning management system.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=800&auto=format&fit=crop" alt="College Learning Management System" class="thumbnail-img" loading="lazy">
@@ -222,15 +225,16 @@
           </a>
         </div>
 
+        <!-- 9. Local SME Shopping Catalogue (Populated with all 28 screenshots) -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
              data-title="Local SME Shopping Catalogue" data-meta="v2.1.5 · JavaScript / AJAX" data-link=""
-             data-full="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1600&auto=format&fit=crop"
+             data-images="images/screenshots/local-sme/admin-dashboard.png, images/screenshots/local-sme/admin-products.png, images/screenshots/local-sme/customer-home.png, images/screenshots/local-sme/customer-shop.png, images/screenshots/local-sme/about.png, images/screenshots/local-sme/contact-page.png, images/screenshots/local-sme/customer-login.png, images/screenshots/local-sme/customer-register.png, images/screenshots/local-sme/customer-account-page.png, images/screenshots/local-sme/customer-order-history.png, images/screenshots/local-sme/customer-update-form.png, images/screenshots/local-sme/customer-update-password.png, images/screenshots/local-sme/shop-product-view.png, images/screenshots/local-sme/shop-product-view2.png, images/screenshots/local-sme/customer-wishlist.png, images/screenshots/local-sme/shop-cart.png, images/screenshots/local-sme/checkout.png, images/screenshots/local-sme/admin-login.png, images/screenshots/local-sme/admin-customer-table.png, images/screenshots/local-sme/admin-customer-orders.png, images/screenshots/local-sme/admin-order-details.png, images/screenshots/local-sme/admin-category-table.png, images/screenshots/local-sme/admin-category-data-profile.png, images/screenshots/local-sme/admin-category-update-form.png, images/screenshots/local-sme/admin-product-table.png, images/screenshots/local-sme/admin-product-update-form.png, images/screenshots/local-sme/admin-product-add-form.png, images/screenshots/local-sme/admin-update-account-form.png, images/screenshots/local-sme/admin-change-password-form.png"
              data-desc="E-shopping catalogue with an admin management system.">
             <div class="thumbnail-img-wrap">
-              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" alt="Local SME Shopping Catalogue" class="thumbnail-img" loading="lazy">
+              <img src="images/screenshots/local-sme/customer-home.png" alt="Local SME Shopping Catalogue" class="thumbnail-img" loading="lazy">
               <span class="status-pill local">Local Project</span>
-              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
+              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i><span class="ms-2 fw-bold text-white small">View 29 Screens</span></div>
             </div>
             <div class="thumbnail-info">
               <h5 class="thumb-title">Local SME Shopping Catalogue</h5>
@@ -239,10 +243,11 @@
           </a>
         </div>
 
+        <!-- 10. Patient Administration Management System -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
              data-title="Patient Administration Management System" data-meta="v1.2.5 · PHP OOP" data-link=""
-             data-full="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1600&auto=format&fit=crop"
              data-desc="Patient management system for small to medium clinics.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop" alt="Patient Administration Management System" class="thumbnail-img" loading="lazy">
@@ -256,10 +261,11 @@
           </a>
         </div>
 
+        <!-- 11. National Polytech Student Academics Suite -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
              data-title="National Polytech Student Academics Suite" data-meta="v1.0 · System Design / MVC" data-link=""
-             data-full="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop"
              data-desc="Telikom Award winning student academic and learning management system.">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop" alt="National Polytech Student Academics Suite" class="thumbnail-img" loading="lazy">
@@ -273,10 +279,11 @@
           </a>
         </div>
 
+        <!-- 12. Work VISA Management System -->
         <div class="col-6 col-lg-4 gallery-col">
           <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
              data-title="Work VISA Management System" data-meta="v1.0 · PHP / MySQL" data-link=""
-             data-full="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1600&auto=format&fit=crop"
+             data-images="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1600&auto=format&fit=crop"
              data-desc="Document and data management for PNG Immigration and Dept of Labor (Kokopo).">
             <div class="thumbnail-img-wrap">
               <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=800&auto=format&fit=crop" alt="Work VISA Management System" class="thumbnail-img" loading="lazy">
@@ -290,24 +297,6 @@
           </a>
         </div>
 
-        <!-- TEMPLATE (copy this, remove the comment markers, and edit):
-        <div class="col-6 col-lg-4 gallery-col">
-          <a href="#" role="button" class="media-thumbnail-card gallery-item" data-category="local"
-             data-title="Project Title" data-meta="v1.0 · Tech · Client" data-link=""
-             data-full="images/gallery/project-full.jpg"
-             data-desc="One or two sentences about the project.">
-            <div class="thumbnail-img-wrap">
-              <img src="images/gallery/project-thumb.jpg" alt="Project Title" class="thumbnail-img" loading="lazy">
-              <span class="status-pill local">Local Project</span>
-              <div class="thumbnail-overlay"><i class="bi bi-zoom-in overlay-icon"></i></div>
-            </div>
-            <div class="thumbnail-info">
-              <h5 class="thumb-title">Project Title</h5>
-              <p class="thumb-meta">v1.0 · Tech · Client</p>
-            </div>
-          </a>
-        </div>
-        -->
       </div>
 
       <div class="gallery-empty d-none" id="galleryEmpty">
@@ -315,7 +304,7 @@
         <p>No projects match your filter. Try another category or clear the search.</p>
       </div>
 
-      <!-- Single lightbox shared by every item -->
+      <!-- Single Shared Lightbox / Carousel -->
       <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true" aria-label="Project preview">
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content media-modal-content">
@@ -323,13 +312,18 @@
             <div class="modal-body p-0">
               <div class="lb-stage">
                 <img src="" alt="" class="modal-image" id="lbImage">
+                
+                <!-- Carousel Controls -->
                 <button type="button" class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"><i class="bi bi-chevron-left"></i></button>
                 <button type="button" class="lb-nav lb-next" id="lbNext" aria-label="Next"><i class="bi bi-chevron-right"></i></button>
+                
+                <!-- Image Counter (e.g. 1 / 5) -->
+                <div class="lb-counter-pill" id="lbCounterPill">1 / 1</div>
               </div>
+              
               <div class="modal-caption">
                 <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
                   <span class="status-pill static" id="lbStatus"></span>
-                  <span class="lb-counter" id="lbCounter"></span>
                 </div>
                 <h4 id="lbTitle"></h4>
                 <p class="mb-1 small text-secondary" id="lbMeta"></p>
@@ -365,7 +359,7 @@
     </div>
   </footer>
 
-    <!-- Floating Action Buttons -->
+  <!-- Floating Action Buttons -->
   <div class="floating-actions">
     <a href="mailto:cykili03@gmail.com" class="fab-btn email-btn" aria-label="Send Email" title="Send Email">
       <i class="bi bi-envelope-fill"></i>
@@ -374,7 +368,6 @@
       <i class="bi bi-arrow-up-short"></i>
     </button>
   </div>
-  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

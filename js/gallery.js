@@ -1,92 +1,170 @@
-/* Media gallery: filters, search, shared lightbox with prev/next */
-(function () {
-  var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item'));
-  var modalEl = document.getElementById('galleryModal');
-  if (!items.length || !modalEl) return;
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('galleryGrid');
+  const items = Array.from(document.querySelectorAll('.gallery-item'));
+  const chips = document.querySelectorAll('.chip');
+  const searchInput = document.getElementById('gallerySearch');
+  const statusText = document.getElementById('galleryStatus');
+  const emptyState = document.getElementById('galleryEmpty');
+  
+  // Modal Elements
+  const modalElement = document.getElementById('galleryModal');
+  const modal = new bootstrap.Modal(modalElement);
+  const lbImage = document.getElementById('lbImage');
+  const lbTitle = document.getElementById('lbTitle');
+  const lbMeta = document.getElementById('lbMeta');
+  const lbDesc = document.getElementById('lbDesc');
+  const lbLink = document.getElementById('lbLink');
+  const lbStatus = document.getElementById('lbStatus');
+  const lbCounterPill = document.getElementById('lbCounterPill');
+  const btnPrev = document.getElementById('lbPrev');
+  const btnNext = document.getElementById('lbNext');
 
-  var chips = document.querySelectorAll('.chip');
-  var search = document.getElementById('gallerySearch');
-  var statusEl = document.getElementById('galleryStatus');
-  var emptyEl = document.getElementById('galleryEmpty');
-  var labels = { deployed: 'Deployed', development: 'In Development', local: 'Local Project' };
-  var filter = 'all', query = '', current = 0;
-  var modal = new bootstrap.Modal(modalEl);
+  let currentFilter = 'all';
+  let currentSearch = '';
+  let currentImageIndex = 0;
+  let activeImages = [];
 
-  function visible() {
-    return items.filter(function (el) { return !el.closest('.gallery-col').classList.contains('d-none'); });
-  }
+  // --- FILTER LOGIC ---
+  function applyFilters() {
+    let visibleCount = 0;
 
-  function apply() {
-    var shown = 0;
-    items.forEach(function (el) {
-      var hay = (el.dataset.title + ' ' + el.dataset.meta + ' ' + el.dataset.desc).toLowerCase();
-      var ok = (filter === 'all' || el.dataset.category === filter) && (!query || hay.indexOf(query) !== -1);
-      el.closest('.gallery-col').classList.toggle('d-none', !ok);
-      if (ok) shown++;
+    items.forEach(item => {
+      const category = item.dataset.category;
+      const title = item.dataset.title.toLowerCase();
+      const meta = item.dataset.meta.toLowerCase();
+      const desc = item.dataset.desc.toLowerCase();
+      
+      const matchesFilter = (currentFilter === 'all' || category === currentFilter);
+      const matchesSearch = (title.includes(currentSearch) || meta.includes(currentSearch) || desc.includes(currentSearch));
+
+      if (matchesFilter && matchesSearch) {
+        item.parentElement.style.display = 'block';
+        visibleCount++;
+      } else {
+        item.parentElement.style.display = 'none';
+      }
     });
-    emptyEl.classList.toggle('d-none', shown > 0);
-    statusEl.textContent = 'Showing ' + shown + ' of ' + items.length + ' projects';
+
+    // Update Status & Empty State
+    statusText.textContent = `Showing ${visibleCount} project${visibleCount !== 1 ? 's' : ''}`;
+    if (visibleCount === 0) {
+      emptyState.classList.remove('d-none');
+    } else {
+      emptyState.classList.add('d-none');
+    }
   }
 
-  chips.forEach(function (chip) {
-    var f = chip.dataset.filter;
-    chip.querySelector('.chip-count').textContent =
-      f === 'all' ? items.length : items.filter(function (i) { return i.dataset.category === f; }).length;
-    chip.addEventListener('click', function () {
-      filter = f;
-      chips.forEach(function (c) { c.classList.toggle('active', c === chip); });
-      apply();
+  // Filter Chips Click
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentFilter = chip.dataset.filter;
+      applyFilters();
     });
   });
 
-  search.addEventListener('input', function () { query = search.value.trim().toLowerCase(); apply(); });
+  // Search Input
+  searchInput.addEventListener('input', (e) => {
+    currentSearch = e.target.value.toLowerCase().trim();
+    applyFilters();
+  });
 
-  function show(i) {
-    var list = visible();
-    if (!list.length) return;
-    current = (i + list.length) % list.length;
-    var d = list[current].dataset;
-    var img = document.getElementById('lbImage');
-    img.classList.add('lb-loading');
-    img.onload = function () { img.classList.remove('lb-loading'); };
-    img.src = d.full; img.alt = d.title;
-    document.getElementById('lbTitle').textContent = d.title;
-    document.getElementById('lbMeta').textContent = d.meta;
-    document.getElementById('lbDesc').textContent = d.desc;
-    document.getElementById('lbCounter').textContent = (current + 1) + ' / ' + list.length;
-    var st = document.getElementById('lbStatus');
-    st.textContent = labels[d.category]; st.className = 'status-pill static ' + d.category;
-    var link = document.getElementById('lbLink');
-    link.classList.toggle('d-none', !d.link);
-    if (d.link) link.href = d.link;
-    document.querySelectorAll('.lb-nav').forEach(function (b) { b.classList.toggle('d-none', list.length < 2); });
+  // Calculate counts for chips on load
+  const counts = { all: items.length, deployed: 0, development: 0, local: 0 };
+  items.forEach(item => counts[item.dataset.category]++);
+  chips.forEach(chip => {
+    const filter = chip.dataset.filter;
+    const countSpan = chip.querySelector('.chip-count');
+    if (countSpan) countSpan.textContent = `(${counts[filter]})`;
+  });
+
+  // Initial filter
+  applyFilters();
+
+  // --- CAROUSEL / MODAL LOGIC ---
+  
+  function updateCarousel() {
+    if (activeImages.length === 0) return;
+    
+    // Set Image
+    lbImage.src = activeImages[currentImageIndex];
+    
+    // Update Counter
+    lbCounterPill.textContent = `${currentImageIndex + 1} / ${activeImages.length}`;
+
+    // Hide/Show navigation arrows based on image count
+    if (activeImages.length <= 1) {
+      btnPrev.style.display = 'none';
+      btnNext.style.display = 'none';
+    } else {
+      btnPrev.style.display = 'flex';
+      btnNext.style.display = 'flex';
+    }
+
+    // Reset loading state
+    lbImage.style.opacity = 0.5;
+    lbImage.onload = () => { lbImage.style.opacity = 1; };
   }
 
-  items.forEach(function (el) {
-    el.addEventListener('click', function (e) {
+  // Attach click event to all gallery items
+  items.forEach(item => {
+    item.addEventListener('click', (e) => {
       e.preventDefault();
-      show(visible().indexOf(el));
+      
+      // Extract Data
+      const title = item.dataset.title;
+      const meta = item.dataset.meta;
+      const desc = item.dataset.desc;
+      const link = item.dataset.link;
+      const category = item.dataset.category;
+      const imagesStr = item.dataset.images;
+      
+      // Parse Images (comma separated)
+      activeImages = imagesStr.split(',').map(s => s.trim());
+      currentImageIndex = 0;
+
+      // Populate Text Content
+      lbTitle.textContent = title;
+      lbMeta.textContent = meta;
+      lbDesc.textContent = desc;
+      
+      // Handle Live Link
+      if (link) {
+        lbLink.href = link;
+        lbLink.classList.remove('d-none');
+      } else {
+        lbLink.classList.add('d-none');
+      }
+
+      // Handle Status Pill formatting
+      lbStatus.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+      lbStatus.className = `status-pill ${category} static`;
+
+      // Load first image and open modal
+      updateCarousel();
       modal.show();
     });
   });
 
-  document.getElementById('lbPrev').addEventListener('click', function () { show(current - 1); });
-  document.getElementById('lbNext').addEventListener('click', function () { show(current + 1); });
-
-  document.addEventListener('keydown', function (e) {
-    if (!modalEl.classList.contains('show')) return;
-    if (e.key === 'ArrowLeft') show(current - 1);
-    if (e.key === 'ArrowRight') show(current + 1);
+  // Carousel Controls
+  btnPrev.addEventListener('click', () => {
+    if (activeImages.length <= 1) return;
+    currentImageIndex = (currentImageIndex - 1 + activeImages.length) % activeImages.length;
+    updateCarousel();
   });
 
-  var x0 = null;
-  modalEl.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
-  modalEl.addEventListener('touchend', function (e) {
-    if (x0 === null) return;
-    var dx = e.changedTouches[0].clientX - x0;
-    if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
-    x0 = null;
-  }, { passive: true });
+  btnNext.addEventListener('click', () => {
+    if (activeImages.length <= 1) return;
+    currentImageIndex = (currentImageIndex + 1) % activeImages.length;
+    updateCarousel();
+  });
 
-  apply();
-})();
+  // Keyboard Navigation (Left / Right Arrows)
+  document.addEventListener('keydown', (e) => {
+    if (!modalElement.classList.contains('show')) return;
+    
+    if (e.key === 'ArrowLeft') btnPrev.click();
+    if (e.key === 'ArrowRight') btnNext.click();
+  });
+});
